@@ -18,14 +18,40 @@
 .thumb.ship{background:radial-gradient(circle at 50% 45%,#225b64,#17243b 72%)}
 .thumb.chicken{background:radial-gradient(circle at 50% 45%,#80602c,#3b2b21 72%)}
 .thumb.auction .logo-name{color:#fff0cf}.thumb.beat .logo-name{color:#f5df9d}.thumb.spacez .logo-name{color:#d8e8ff}.thumb.ship .logo-name{color:#d8fff4}.thumb.chicken .logo-name{color:#ffe9a8}
-.game:hover .game-logo{transform:translateY(-3px) scale(1.06)}.tag{position:absolute;top:11px;left:11px;background:#111827d9;padding:5px 9px;border-radius:7px;font-size:11px}.gbody{padding:14px}.gtitle{font-weight:850;font-size:17px}.desc{color:var(--muted);font-size:13px;min-height:39px;margin:5px 0 13px}.gfoot{display:flex;align-items:center;justify-content:space-between;gap:8px}.play{background:#353052;color:#e9e5ff;border:1px solid #5c548b;border-radius:10px;padding:8px 13px;font-weight:800}.status{font-size:11px;color:var(--b)}.empty{display:none;color:var(--muted);padding:25px;text-align:center;background:var(--panel);border-radius:14px}.submitbox{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:20px;display:flex;justify-content:space-between;align-items:center;gap:18px}.submitbox p{color:var(--muted);margin:4px 0 0}.foot{border-top:1px solid var(--line);padding:25px;text-align:center;color:var(--muted);font-size:12px}.modal{position:fixed;inset:0;background:#000b;z-index:10;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modalbox{width:min(1050px,100%);height:min(720px,90vh);background:#11131e;border:1px solid #454963;border-radius:17px;display:flex;flex-direction:column;overflow:hidden}.modalhead{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}.modalhead strong{flex:1}.close{border:1px solid var(--line);background:var(--panel2);color:white;border-radius:9px;padding:7px 11px}.frame{flex:1;border:0;width:100%;background:#080910}.framehint{padding:12px 16px;color:var(--muted);font-size:12px}.hidden{display:none!important}
+.game:hover .game-logo{transform:translateY(-3px) scale(1.06)}
+.logo{text-decoration:none;cursor:pointer;transition:opacity .18s}
+.logo:hover{opacity:.9}
+.logo:hover .brandicon{transform:rotate(0) scale(1.04)}
+.recent-section{margin:0 0 26px}
+.recent-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:13px}
+.recent-kicker{font-size:10px;font-weight:900;letter-spacing:2px;color:var(--b);margin-bottom:3px}
+.recent-head h2{font-size:20px;margin:0 0 3px}
+.recent-rail{display:grid;grid-auto-flow:column;grid-auto-columns:176px;gap:12px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 11px;scrollbar-width:thin;scrollbar-color:#50566d transparent;overscroll-behavior-x:contain}
+.recent-card{display:flex;flex-direction:column;min-width:0;padding:0;text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .18s,border-color .18s}
+.recent-card:hover{transform:translateY(-3px);border-color:#7770bd}
+.recent-card:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+.recent-card .thumb{height:112px;width:100%;gap:5px;flex:none}
+.recent-card .game-logo{width:62px;height:62px;flex:0 0 62px}
+.recent-card .logo-name{font-size:12px;letter-spacing:.55px}
+.recent-card .logo-name small,.recent-card .tag{display:none}
+.recent-meta{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:10px 11px;font-size:12px}
+.recent-meta strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recent-meta span{color:var(--b);font-weight:900}
+@media(max-width:540px){.recent-rail{grid-auto-columns:150px}.recent-card .thumb{height:102px}.recent-card .game-logo{width:56px;height:56px;flex-basis:56px}}
+.tag{position:absolute;top:11px;left:11px;background:#111827d9;padding:5px 9px;border-radius:7px;font-size:11px}.gbody{padding:14px}.gtitle{font-weight:850;font-size:17px}.desc{color:var(--muted);font-size:13px;min-height:39px;margin:5px 0 13px}.gfoot{display:flex;align-items:center;justify-content:space-between;gap:8px}.play{background:#353052;color:#e9e5ff;border:1px solid #5c548b;border-radius:10px;padding:8px 13px;font-weight:800}.status{font-size:11px;color:var(--b)}.empty{display:none;color:var(--muted);padding:25px;text-align:center;background:var(--panel);border-radius:14px}.submitbox{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:20px;display:flex;justify-content:space-between;align-items:center;gap:18px}.submitbox p{color:var(--muted);margin:4px 0 0}.foot{border-top:1px solid var(--line);padding:25px;text-align:center;color:var(--muted);font-size:12px}.modal{position:fixed;inset:0;background:#000b;z-index:10;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modalbox{width:min(1050px,100%);height:min(720px,90vh);background:#11131e;border:1px solid #454963;border-radius:17px;display:flex;flex-direction:column;overflow:hidden}.modalhead{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}.modalhead strong{flex:1}.close{border:1px solid var(--line);background:var(--panel2);color:white;border-radius:9px;padding:7px 11px}.frame{flex:1;border:0;width:100%;background:#080910}.framehint{padding:12px 16px;color:var(--muted);font-size:12px}.hidden{display:none!important}
 @media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{display:none}.hero{padding:28px 22px}.hero:after{font-size:130px;right:8px}}
 @media(max-width:540px){.grid{grid-template-columns:1fr}.thumb{height:135px}.nav{gap:12px;padding:12px 15px}.logo{font-size:22px}.search{max-width:none;width:auto;min-width:0}.submitbox{align-items:flex-start;flex-direction:column}main{padding:20px 15px 50px}}
 </style>
 </head>
 <body>
-<header class="top"><nav class="nav"><div class="logo brandmark"><span class="brandicon">GG</span><span>GAME GAME</span></div><div class="navlinks"><a href="#games">ゲーム</a><a href="#submit">ゲームを追加</a></div><input id="search" class="search" placeholder="ゲームを検索…" aria-label="ゲームを検索"></nav></header>
+<header class="top"><nav class="nav"><a class="logo brandmark" href="/" aria-label="GAME GAME ホーム"><span class="brandicon">GG</span><span>GAME GAME</span></a><div class="navlinks"><a href="#recentSection" id="recentNav" hidden>最近プレイ</a><a href="#games">ゲーム</a><a href="#submit">ゲームを追加</a></div><input id="search" class="search" placeholder="ゲームを検索…" aria-label="ゲームを検索"></nav></header>
 <main>
+<section class="recent-section" id="recentSection" hidden aria-label="最近プレイしたゲーム">
+  <div class="recent-head">
+    <div><div class="recent-kicker">CONTINUE PLAYING</div><h2>最近プレイしたゲーム</h2><div class="sub">前に遊んだゲームへ、すぐに戻れます。</div></div>
+  </div>
+  <div class="recent-rail" id="recentRail" aria-label="最近プレイしたゲーム一覧"></div>
+</section>
 <section class="hero"><div class="eyebrow">YOUR FRIENDS' GAME HUB</div><h1>遊びたいゲーム、<br>ここに集合。</h1><p>自分たちで作ったゲームを、ひとつの場所から。友達の作品もどんどん追加していこう。</p><button class="primary" onclick="document.querySelector('#games').scrollIntoView({behavior:'smooth'})">ゲームを探す ↓</button></section>
 <div class="chips" id="filters"><button class="chip active" data-cat="all">すべて</button><button class="chip" data-cat="auction">シミュレーション</button><button class="chip" data-cat="action">アクション</button><button class="chip" data-cat="other">その他</button></div>
 <section class="section" id="games"><div class="sectionhead"><div><h2>🎮 ゲームライブラリ</h2><div class="sub">GAME GAME に集まったゲーム</div></div><div class="sub" id="count">5 GAMES</div></div>
@@ -46,12 +72,19 @@
 <path d="M50 86C42 78 15 57 15 35 15 19 26 11 39 15c5 2 9 6 11 12 4-9 12-13 21-12 13 1 20 12 18 25-2 20-25 39-39 46Z" fill="#203c55" stroke="#f7d98b" stroke-width="5" stroke-linejoin="round"/>
 <path d="M22 50h17l9-19 11 38 9-19h11" fill="none" stroke="#fff4cf" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg><div class="logo-name">BEAT LIFE<small>YOUR STORY, YOUR CHOICES</small></div><b class="tag">COMING SOON</b></div><div class="gbody"><div class="gtitle">BEAT LIFE</div><div class="desc">開発中のゲーム。公開プレイURLができたらここから遊べるようにします。</div><div class="gfoot"><span class="status">● IN DEVELOPMENT</span><a class="play" style="text-decoration:none" href="https://github.com/ItzAAA49/beat-life" target="_blank" rel="noopener">開発ページ ↗</a></div></div></article>
-<article class="game" data-name="space z space-z" data-cat="action"><div class="thumb spacez"><svg class="game-logo" viewBox="0 0 100 100" role="img" aria-label="宇宙船">
-<path d="M18 76C28 43 49 18 81 10 73 42 49 69 18 76Z" fill="#48bce9" stroke="#e5faff" stroke-width="4" stroke-linejoin="round"/>
-<path d="M39 65 21 83l-3-7 3-16M53 51l15 17-8 3-17-10" fill="#2878b9" stroke="#d9f5ff" stroke-width="3" stroke-linejoin="round"/>
-<path d="M62 26c4-5 10-9 19-16-2 11-5 18-11 24Z" fill="#bdf1ff"/>
-<circle cx="52" cy="47" r="8" fill="#15344d" stroke="#e8fbff" stroke-width="3"/>
-<path d="M15 82l-5 8m15-3-2 7" stroke="#ffb16e" stroke-width="4" stroke-linecap="round"/>
+<article class="game" data-name="space z space-z" data-cat="action"><div class="thumb spacez"><svg class="game-logo" viewBox="0 0 100 100" role="img" aria-label="惑星の軌道を飛ぶロケット">
+<defs><linearGradient id="spaceZHull" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#48a9e9"/><stop offset=".55" stop-color="#dff8ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+<circle cx="50" cy="50" r="39" fill="#142345" stroke="#638fce" stroke-width="3"/>
+<path d="M26 61c4-15 18-27 35-28 8 0 14 3 18 8-6 17-20 29-38 31-7 1-12-3-15-11Z" fill="#244b86" stroke="#70c8ed" stroke-width="2.5"/>
+<path d="M40 61c8-12 21-18 35-18-6 13-18 23-33 26Z" fill="#3971a9"/>
+<ellipse cx="50" cy="50" rx="43" ry="16" transform="rotate(-35 50 50)" fill="none" stroke="#7bdcf3" stroke-width="3" opacity=".88"/>
+<path d="M29 76c1-21 17-47 47-63-3 29-20 53-47 63Z" fill="url(#spaceZHull)" stroke="#f1fbff" stroke-width="3" stroke-linejoin="round"/>
+<path d="M39 62 18 72l10 13 19-13Z" fill="#368cc9" stroke="#c9f1ff" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M53 46 65 67l17-16-13-15Z" fill="#4a9bd5" stroke="#d4f4ff" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="56" cy="43" r="7" fill="#163653" stroke="#dffaff" stroke-width="3"/>
+<path d="M29 76 12 91l23-8Z" fill="#ff9e58" stroke="#ffd2a5" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="m20 80-9 9 13-5" fill="#ffe2a8"/>
+<path d="M21 26h5m-2.5-2.5v5M77 74h6m-3-3v6M73 18h4" stroke="#e4f8ff" stroke-width="2.5" stroke-linecap="round"/>
 </svg><div class="logo-name">SPACE Z<small>EXPLORE THE UNKNOWN</small></div><b class="tag">FRIEND'S GAME</b></div><div class="gbody"><div class="gtitle">SPACE Z</div><div class="desc">宇宙＆惑星サバイバル、FPS戦闘、オンラインPvPを楽しもう。</div><div class="gfoot"><span class="status">● EXTERNAL SITE</span><button class="play" onclick="launch('https://s26121-lang.github.io/space-Z/','SPACE Z')">開く →</button></div></div></article>
 <article class="game" data-name="ship place fps tactical shooter" data-cat="action"><div class="thumb ship"><svg class="game-logo" viewBox="0 0 100 100" role="img" aria-label="照準入りシールド">
 <path d="M50 8 83 20v27c0 22-14 36-33 45-19-9-33-23-33-45V20Z" fill="#174452" stroke="#a9f4e4" stroke-width="5" stroke-linejoin="round"/>
@@ -59,13 +92,16 @@
 <circle cx="50" cy="49" r="18" fill="#12313d" stroke="#f0fffa" stroke-width="4"/>
 <circle cx="50" cy="49" r="6" fill="#ff796f" stroke="#fff" stroke-width="2"/>
 </svg><div class="logo-name">SHIP.PLACE<small>TACTICAL FPS</small></div><b class="tag">FRIEND'S GAME</b></div><div class="gbody"><div class="gtitle">SHIP.PLACE</div><div class="desc">友達のFPS系ゲーム。戦場に飛び込んでプレイしよう。</div><div class="gfoot"><span class="status">● EXTERNAL SITE</span><button class="play" onclick="launch('https://helpful-patio-8p76u.ship.place/','SHIP.PLACE')">開く →</button></div></div></article>
-<article class="game" data-name="chicken clicker click chickens" data-cat="other"><div class="thumb chicken"><svg class="game-logo" viewBox="0 0 100 100" role="img" aria-label="白いニワトリの顔">
-<path d="M29 30C30 21 39 16 48 18c16-7 34 4 37 21 3 17-6 33-23 39-17 6-34-2-39-17-5-13-2-25 6-31Z" fill="#f6f6f2" stroke="#c9cbd0" stroke-width="3.5" stroke-linejoin="round"/>
-<path d="M34 22c-8-8-5-16 2-15 5 1 7 6 8 10 3-10 11-13 14-7 2 4 0 9-2 13 8-7 16-4 14 3-1 4-6 7-12 8Z" fill="#f34e55" stroke="#ff9a91" stroke-width="2.5" stroke-linejoin="round"/>
-<path d="M27 39 7 46l20 8Z" fill="#ffb72e" stroke="#e88c1f" stroke-width="2.5" stroke-linejoin="round"/>
-<circle cx="35" cy="37" r="4.2" fill="#20222a"/>
-<path d="M24 50c-7 3-9 10-4 15 4 4 9 2 12-1" fill="#ee5960"/>
-<path d="M34 78l-7 8 12-3 7 4 6-7 8 4 7-9" fill="none" stroke="#d0d1d2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<article class="game" data-name="chicken clicker click chickens" data-cat="other"><div class="thumb chicken"><svg class="game-logo" viewBox="0 0 100 100" role="img" aria-label="白いニワトリのイラスト">
+<rect x="6" y="6" width="88" height="88" rx="22" fill="#ffd36a" stroke="#fff0b4" stroke-width="3"/>
+<path d="M20 57c-8-6-10-17-4-21 5-4 12 1 15 7 2-13 12-22 27-21 17 1 27 14 25 30-1 17-14 29-34 29-16 0-26-8-29-24Z" fill="#fffdf4" stroke="#d9d5c9" stroke-width="3" stroke-linejoin="round"/>
+<path d="M35 27c-8-9-4-17 2-15 5 1 7 6 8 10 2-11 10-14 14-8 3 4 1 9-2 13 9-7 16-2 13 4-2 5-8 7-15 7Z" fill="#ef4e55" stroke="#ff9a8e" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M74 41 94 49 74 57c-4-5-4-11 0-16Z" fill="#ffad28" stroke="#e9871b" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="66" cy="38" r="4.5" fill="#20222a"/>
+<circle cx="67.5" cy="36.5" r="1.3" fill="#fff"/>
+<path d="M73 58c8 1 10 7 7 11-3 4-8 2-10-2Z" fill="#eb5960"/>
+<path d="M28 56c7-9 19-10 27-3-1 12-13 18-25 13Z" fill="#f0ede4" stroke="#d8d3c8" stroke-width="2"/>
+<path d="M41 80v8m18-8v8m-8-1-8 4m26-4-8 4" fill="none" stroke="#e98c22" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg><div class="logo-name">CHICKEN CLICKER<small>CLICK · COLLECT · REPEAT</small></div><b class="tag">FRIEND'S GAME</b></div><div class="gbody"><div class="gtitle">CHICKEN CLICKER</div><div class="desc">ニワトリをクリックして楽しむクリッカーゲーム。</div><div class="gfoot"><span class="status">● EXTERNAL SITE</span><button class="play" onclick="launch('https://script.google.com/macros/s/AKfycbwbd1N_PY8bqdn-lGuDkBcRyB3oq8VQqQao_lMuBe-LfvyZMA-94Me89xMp-zmtnuuE0w/exec','CHICKEN CLICKER')">開く →</button></div></div></article>
 </div><div class="empty" id="empty">該当するゲームがありません。</div></section>
 <section class="section" id="submit"><div class="submitbox"><div><strong>🚀 友達のゲームも追加しよう</strong><p>ゲーム名・紹介文・公開URLを管理者に送れば、ライブラリに追加できます。</p></div><a class="play" href="https://github.com/ItzAAA49/game-game" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap">追加を相談 ↗</a></div></section>
@@ -75,7 +111,33 @@
 const search=document.getElementById('search'),cards=[...document.querySelectorAll('.game')],chips=[...document.querySelectorAll('.chip')];let category='all';
 function filter(){let q=search.value.trim().toLowerCase(),shown=0;cards.forEach(c=>{let ok=(category==='all'||c.dataset.cat===category)&&c.dataset.name.includes(q);c.classList.toggle('hidden',!ok);if(ok)shown++});document.getElementById('empty').style.display=shown?'none':'block';document.getElementById('count').textContent=shown+' GAMES'}
 search.addEventListener('input',filter);chips.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.cat;chips.forEach(x=>x.classList.toggle('active',x===b));filter()}));
-function launch(url,title){document.getElementById('modalTitle').textContent=title;document.getElementById('frame').src=url;document.getElementById('external').href=url;document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden'}
+function readRecent(){try{const value=JSON.parse(localStorage.getItem('gamegame_recent_v1')||'[]');return Array.isArray(value)?value.filter(x=>typeof x==='string').slice(0,5):[]}catch(e){return[]}}
+function renderRecent(){
+  const section=document.getElementById('recentSection'),rail=document.getElementById('recentRail'),navLink=document.getElementById('recentNav');
+  const recent=readRecent().map(name=>cards.find(card=>card.dataset.name===name)).filter(Boolean);
+  section.hidden=recent.length===0;navLink.hidden=recent.length===0;rail.replaceChildren();
+  recent.forEach(game=>{
+    const tile=document.createElement('button');tile.type='button';tile.className='recent-card';
+    tile.setAttribute('aria-label',game.querySelector('.gtitle').textContent.trim()+' をもう一度プレイ');
+    const thumb=game.querySelector('.thumb').cloneNode(true);thumb.querySelector('.tag')?.remove();tile.appendChild(thumb);
+    const meta=document.createElement('div');meta.className='recent-meta';
+    const label=document.createElement('strong');label.textContent=game.querySelector('.gtitle').textContent.trim();
+    const action=document.createElement('span');action.textContent='PLAY →';meta.append(label,action);tile.appendChild(meta);
+    tile.addEventListener('click',()=>{
+      const play=game.querySelector('.gfoot button.play[onclick^="launch("]');
+      if(play)play.click();else{const link=game.querySelector('.gfoot a.play');if(link)link.click()}
+    });
+    rail.appendChild(tile);
+  });
+}
+function rememberRecent(title){
+  const game=cards.find(card=>card.querySelector('.gtitle')?.textContent.trim()===title);
+  if(!game)return;
+  const name=game.dataset.name,updated=[name,...readRecent().filter(item=>item!==name)].slice(0,5);
+  try{localStorage.setItem('gamegame_recent_v1',JSON.stringify(updated))}catch(e){}
+  renderRecent();
+}
+function launch(url,title){rememberRecent(title);document.getElementById('modalTitle').textContent=title;document.getElementById('frame').src=url;document.getElementById('external').href=url;document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden'}
 function closeGame(){document.getElementById('modal').classList.remove('open');document.getElementById('frame').src='about:blank';document.body.style.overflow=''}
-document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeGame()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGame()});
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeGame()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGame()});renderRecent();
 </script></body></html>
